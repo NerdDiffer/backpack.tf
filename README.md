@@ -98,8 +98,7 @@ _Object_ `options` should be used to specify at least two keys:
     * `Collector's`
   * Returns an empty array if there's nothing found.
 
-As with the `getPrices` function, the callback is called by jsonist with up
-to 3 arguments
+As described above in `b.getPrices`, `callback` is called by jsonist.
 
 ### `b.getCurrencies(callback)`
 
@@ -111,7 +110,7 @@ Queries backpack.tf's internal item placeholders for a given game.
 
 ### `b.getMarketPrices(callback)`
 
-Queries for Steam Community Market price information in a readable format.
+Queries for Steam Community Market price information.
 
 ### `b.getUsers(users, callback)`
 

@@ -56,7 +56,16 @@ test('getPrices', function(t) {
 test('getPriceHistory', function(t) {
   t.plan(4);
 
-  api.get('/api/IGetPriceHistory/v1?key=blah&appid=440&item=Dalokohs%20Bar&quality=Strange&tradable=1&craftable=1&priceindex=0')
+  api.get('/api/IGetPriceHistory/v1')
+    .query({
+      key: 'blah',
+      appid: 440,
+      item: 'Dalokohs Bar',
+      quality: 'Strange',
+      tradable: 1,
+      craftable: 1,
+      priceindex: 0
+    })
     .reply(200, require('./fixtures/price_history.json'));
 
   var b = new backpacktf('blah');
